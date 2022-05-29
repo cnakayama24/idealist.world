@@ -84,7 +84,7 @@ body {
     background-color: rgba(32, 33, 46, 0.782);
     border-radius: 3%;
 }
-
+/*
 .card:hover {
 background-color: rgba(46, 47, 60, 0.782);;
 animation: blinks 3s linear infinite;
@@ -102,7 +102,7 @@ animation: blinks 3s linear infinite;
         opacity: 0.5;
     }
   }
-
+*/
 
 .cardContent {
     padding: 8%;
@@ -151,8 +151,8 @@ animation: blinks 3s linear infinite;
 .connect 
 {
     margin: 2%;
-    background: rgba(44, 44, 52, 0.782);
-    padding: 1.7%;
+    background-color: rgba(32, 33, 46, 0.782);
+    padding: 2.3%;
     border-radius: 8%;
     font-size: 3vw;
 }
@@ -213,3 +213,45 @@ animation: blinks 3s linear infinite;
       transform: rotateX(360deg); 
     }
   }
+
+  .forFun {
+      text-align: center;
+      margin: 4%;
+  }
+
+ .featured {
+     margin-left: auto;
+     margin-right: auto;
+     background-color: rgba(32, 33, 46, 0.782);
+     border-radius: 6%;
+     width: 70%;
+     text-align: left;
+ }
+
+ .featured .companyInfo {
+    padding: 0;
+}
+
+.featured .companyInfo h1{
+    font-size: 3vw;
+    margin-top: -2.5%;
+}
+
+.featured .companyInfo p{
+    font-size: 2.3vw;
+}
+
+.buttons
+{
+    text-align: right;
+    margin-top: -1.2%;
+    margin-bottom: -3%;
+}
+
+.buttons p { 
+    display: inline-block;
+    font-size: 2.5vw !important;
+    color: white;
+    margin-left: 2%;
+    font-weight: 600;
+}
