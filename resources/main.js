@@ -1,4 +1,4 @@
-const projects = [["Runaway Sound Board", 'Play the piano intro to "Runaway" by Kanye West.', "https://idealist.world/kanye"], ["Campus Ambassador Programs", "A list of college student brand ambassador programs.","https://idealist.world/ambassador"], ["Project #3", "This is going to be my third project.  Not sure what it is yet though.","youtube.com"]];
+const projects = [["Runaway Sound Board", 'Play the piano intro to "Runaway" by Kanye West.', "https://idealist.world/kanye"], ["Campus Ambassador Programs", "A list of college student brand ambassador programs.","https://idealist.world/ambassador"], ["Project #3", "This is going to be my third project.  Not sure what it is yet.","youtube.com"]];
 
 var length = projects.length;
 
