@@ -9,8 +9,9 @@ function switchIt ()
 {
     var border = "2px solid " + programs[counter][2];
     var glow = "0px 0px 8vw 1.5vw " + programs[counter][2];
-    var photo = "images/" + programs[counter][0] + ".jpg";
-    photo.toLowerCase();
+    var place = "images/" + programs[counter][0] + ".jpg";
+    photo = place.toLowerCase();
+    alert(photo);
     document.getElementById("box").style.border = border;
     document.getElementById("box").style["boxShadow"] = glow;
     var link = programs[counter][1]
