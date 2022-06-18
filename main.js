@@ -1,103 +1,49 @@
-const notes = ["1","1","1","2","3","3","3","4","5","5","5","6","7","7","8","9"];
+const projects = [["Runaway Sound Board", 'Play the piano intro to "Runaway" by Kanye West.', "https://idealist.world/kanye"], ["Campus Ambassador Programs", "A list of college student brand ambassador programs.","https://idealist.world/campus/index.html?view=0"], ["Project #3", "This is going to be my third project.  Not sure what it is yet.","youtube.com"]];
 
-var  currentNote = document.getElementById("toPlay");
-var counter = 0;
+var length = projects.length;
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+var index = Math.floor(Math.random()*length);
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("currentTitle").innerHTML = projects[index][0];
+    document.getElementById("currentDescription").innerHTML = projects[index][1];
+    document.getElementById("link").setAttribute("href", projects[index][2]);
+}, false);
+
+
+function next ()
+{
+    if (index !== length -1)
+    {
+        index ++;
+        document.getElementById("currentTitle").innerHTML = projects[index][0];
+        document.getElementById("currentDescription").innerHTML = projects[index][1];
+		document.getElementById("link").setAttribute("href", projects[index][2]);
+
+    }
+    else
+    {
+        index = 0;
+        document.getElementById("currentTitle").innerHTML = projects[index][0];
+        document.getElementById("currentDescription").innerHTML = projects[index][1];
+		document.getElementById("link").setAttribute("href", projects[index][2]);
+    }
 }
 
-
-function clicked (number)
+function previous ()
 {
-
-  var button = "note" + number;
-  document.getElementById(button).animate(
-    [
-      { border: "1vw solid grey", duration: 0.5},
-      { border: "2vw solid grey", duration: 0.5},
-      { border: "1vw solid grey", duration: 0.5}
-    ], {
-      duration: 250,
-    } 
-  );
-  document.getElementById("toPlay").animate(
-    [
-      { color:  "#b8b8b8", duration: 0.5},
-      { color: "#d3d3d3", duration: 0.5},
-      { color: "#b8b8b8", duration: 0.5}
-    ], {
-      duration: 250,
-    } 
-  )
-    switch (number)
+    if (index === 0)
     {
-      case "1":
-        {
-          var audio = new Audio("keys/1.mp3");
-          audio.play(notes);      
-        }
-      break;
-      case "2":
-        {
-          var audio = new Audio("keys/2.mp3");
-          audio.play(notes);      
-        }
-      break;
-      case "3":
-        {
-          var audio = new Audio("keys/3.mp3");
-          audio.play(notes);      
-        }
-      break;
-      case "4":
-        {
-          var audio = new Audio("keys/10.mp3");
-          audio.play(notes);      
-        }
-      break;
-      case "5":
-        {
-          var audio = new Audio("keys/5.mp3");
-          audio.play(notes);      
-        }
-      break;
-      case "6":
-        {
-          var audio = new Audio("keys/6.mp3");
-          audio.play(notes);      
-        }
-      break;
-      case "7":
-        {
-          var audio = new Audio("keys/7.mp3");
-          audio.play(notes);      
-        }
-      break;
-       case "8":
-        {
-          var audio = new Audio("keys/8.mp3");
-          audio.play(notes);      
-        }
-      break;
-       case "9":
-        {
-          var audio = new Audio("keys/9.mp3");
-          audio.play(notes);   
-        }
+        index = length - 1;
+        document.getElementById("currentTitle").innerHTML = projects[index][0];
+        document.getElementById("currentDescription").innerHTML = projects[index][1];
+		document.getElementById("link").setAttribute("href", projects[index][2]);
     }
-  if (number === notes[counter] && notes[counter] !== "9")
-  {
-    counter ++;
-    currentNote.textContent = "Note to play: " + notes[counter];
-  }
-  else if (notes[counter] === "9")
-  {
-    currentNote.innerHTML = "<marquee behavior='scroll' scrollamount='30' direction='right'>LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA! LOOK AT YA!</marquee>";
-    var audio = new Audio("keys/sound.mp3");
-    var delayInMilliseconds = 650;
-    setTimeout(function() {
-    audio.play()}, delayInMilliseconds); 
-    setTimeout();
-  }
+    else 
+    {
+        index --;
+        document.getElementById("currentTitle").innerHTML = projects[index][0];
+        document.getElementById("currentDescription").innerHTML = projects[index][1];
+		document.getElementById("link").setAttribute("href", projects[index][2]);
+    }
 }
