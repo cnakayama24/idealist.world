@@ -15,7 +15,7 @@ body {
     position: absolute;
     top: 54.5%;
     left: 50%;
-    width: 70%;
+    width: 65%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
@@ -49,27 +49,3 @@ body {
     margin-top: 3%;
     width: 100%;
 }
-/*
-@media only screen and (min-width: 600px) {
-    .content {
-        position: absolute;
-        top: 54.5%;
-        left: 50%;
-        width: 20%;
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-
-body {
-    background: url("img/background2.svg") no-repeat fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-  }
-  */
-  
