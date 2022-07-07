@@ -1,0 +1,51 @@
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("img/background.svg") no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.content {
+    position: absolute;
+    top: 54.5%;
+    left: 50%;
+    width: 65%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.card {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.icons {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.select {
+    width: 25%;
+}
+
+.nav {
+    width: 45%;
+}
+
+.navigation {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    width: 100%;
+}
