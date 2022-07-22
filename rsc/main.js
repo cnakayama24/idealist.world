@@ -1,50 +1,42 @@
-const startups = [["1", "https://lalabox.io/"], ["2", "https://clic.so/qcp"], ["3", "https://clic.so/itslexismith"], ["4", "https://breakroom.show/"]];
+const startups = [["1", "https://lalabox.io/"], ["2", "https://hulio.app/"], ["3", "https://clic.so/qcp"], ["4", "https://clic.so/itslexismith"], ["5", "https://breakroom.show/"]];
 const length = startups.length;
 var index = 0;
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     adjust();
 }, false);
 
-function adjust () {
-    if (screen.width < 1001)
-    {
+function adjust() {
+    if (screen.width < 1001) {
         var source = "rsc/img/startups/" + startups[index][0] + ".svg";
     }
-    
-    if (screen.width > 1000)
-    {
+
+    if (screen.width > 1000) {
         var source = "rsc/img/startups2/" + startups[index][0] + ".svg";
     }
     document.getElementById("card").src = source;
     document.getElementById("link").setAttribute("href", startups[index][1]);
 }
 
-function next ()
-{
-    if (index !== length -1)
-    {
-        index ++;
-        adjust ();
+function next() {
+    if (index !== length - 1) {
+        index++;
+        adjust();
     }
-    else
-    {
+    else {
         index = 0;
-        adjust ();
+        adjust();
     }
 }
 
-function previous ()
-{
-    if (index === 0)
-    {
+function previous() {
+    if (index === 0) {
         index = length - 1;
-        adjust ();
+        adjust();
     }
-    else 
-    {
-        index --;
-        adjust ();
+    else {
+        index--;
+        adjust();
     }
 }
